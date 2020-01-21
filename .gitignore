@@ -12,7 +12,7 @@ class Warrior:
       print(target1, " has attacked")
       print(target.health, " left")
     if target.health == 0:
-      print(target1, " has won")  
+      print(target1, " has won") 
 
 
 warrior1 = Warrior(100)   
@@ -20,7 +20,7 @@ warrior2 = Warrior(100)
 
 
 q = int(input("Enter 1 to let some warrior attack. Enter 2 to stop program:"))
-
+import random
 while q != 2:
   if q == 1:
     j = random.randint(1,3)
