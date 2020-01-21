@@ -36,6 +36,7 @@ while q != 2:
     break 
     
 #hero_soldier
+import random
 class Solder:
 	def __init__(self, number, team):
 		self.team = team
