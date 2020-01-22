@@ -35,7 +35,9 @@ while q != 2:
     print("Wrong input.")
     break 
     
-#hero_soldier
+#hero_soldier (and code documentation)
+"""Класс Солдат"""
+"""Создаётся объект Soldier"""
 import random
 class Solder:
 	def __init__(self, number, team):
@@ -44,9 +46,10 @@ class Solder:
  
 	def to_hero(self, hero):
 		return hero.number, self.number
- 
+"""Класс Герой"""
+"""Создаётся объект Hero"""
 class Hero:
-	def __init__(self, number, team_number, team): # Если сдесь обьявить team=[] то почему то у нас список не сбрасывается для каждого отдельного экземпляра.
+	def __init__(self, number, team_number, team):
 		self.team_number = team_number
 		self.number = number
 		self.lvl = 0
@@ -60,7 +63,8 @@ class Hero:
  
 	def look_count_team(self):
 		return len(self.team)
- 
+
+"""Присваевается номер команды рандомному герою"""
 hero_team_first = Hero(1, 1, [])
 hero_team_second = Hero(2, 2, [])
 count = 0
@@ -74,7 +78,7 @@ while count < 10:
 	count += 1	
  
  
- 
+"""Повышается уровень первому или второму персонажу"""
 if hero_team_first.look_count_team() > hero_team_second.look_count_team():
 	hero_team_first.up_lvl()
 else:
@@ -97,3 +101,31 @@ first.team.append('ben')
 second.team.append('ken')
 print(first.team, second.team)
 print(first.team is second.team)
+
+
+#code_documentation
+"""Модуль содержит классы плоских фигур."""
+from math import pi, pow
+class Rectangle:
+     """Класс Прямоугольник.
+Конструктор принимает длину и ширину."""
+def __init__(self, a, b):
+self.width = a
+self.height = b
+def square(self):
+"""Метод для вычисления площади прямоугольника."""
+return round(self.width * self.height, 2)
+def perimeter(self):
+"""Метод для вычисления периметра прямоугольника."""
+return 2 * (self.width + self.height)
+class Circle:
+"""Класс Круг.
+Конструктор принимает радиус."""
+def __init__(self, radius):
+self.r = radius
+def square(self):
+"""Метод для вычисления площади круга."""
+return round(pi * pow(self.r, 2), 2)
+def length(self):
+"""Метод для вычисления длины окружности."""
+return round(2 * pi * self.r)
